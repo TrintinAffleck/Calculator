@@ -7,37 +7,33 @@
 
 int main()
 {
-std::cout << "Type your operation to perform: " << std::endl;
+std::cout << "Type your operation to perform: " << "\n";
 std::cin >> operation;
- 
-
+logged = false;
 if (operation == "add" or "Add")
 {
     std::cout << "Current Operation: " << operation << "\n";
 
-    std::cout << "actually adding" << std::endl;
+    std::cout << "actually adding" << "\n";
     std::cout << "Type your first number:";
     std::cin >> Num1;
     std::cout << "Type your second number:";
     std::cin >> Num2;
     std::cout << Add() << "\n";
+    Num1 = 
+    logged = true;
 };
 
 
-if (operation == "subtract" or "Subtract")
+if (operation == "subtract" or "subtract")
 {
     std::cout << "Current Operation: " << operation << "\n";
-    std::cout << "actually subtracting" << std::endl;
+    std::cout << "actually subtracting" << "\n";
     std::cout << "Type your first number:";
     std::cin >> Num1;
     std::cout << "Type your second number:";
     std::cin >> Num2;
     std::cout << Subtract() << "\n";
-}
-
-else
-{
-    operation = "";
 }
 
 

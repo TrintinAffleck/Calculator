@@ -4,6 +4,7 @@
 //Variables
 int Num1;
 int Num2;
+bool logged;
 std::string operation;
 //Functions
 int Add();
