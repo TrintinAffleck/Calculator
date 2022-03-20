@@ -2,12 +2,15 @@
 #include <string>
 
 //Variables
-int Num1;
-int Num2;
-bool logged;
+float num1;
+float num2;
+std::string add = "add";
+std::string subtract = "subtract";
+std::string multiply = "multiply";
+std::string divide = "divide";
 std::string operation;
 //Functions
-int Add();
-int Subtract();
-int Multiply();
-int Divide();
+float Add();
+float Subtract();
+float Multiply();
+float Divide();
