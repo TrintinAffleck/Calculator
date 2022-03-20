@@ -1,85 +1,76 @@
 // Calculator.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
-
 #include <iostream>
-#include <math.h>
 #include "Calculator.h"
+#include <math.h>
 
 int main()
 {
-std::cout << "Type your operation to perform: " << "\n";
-std::cin >> operation;
-logged = false;
-if (operation == "add" or "Add")
-{
-    std::cout << "Current Operation: " << operation << "\n";
+    std::cout << "Welcome to my basic calculator in C++\n";
+    std::cout << "Type your operation to perform: \n";
+    std::cout << "Please type either add subtract multiply or divide (No capital letters)\n";
+    std::cin >> operation;
 
-    std::cout << "actually adding" << "\n";
-    std::cout << "Type your first number:";
-    std::cin >> Num1;
-    std::cout << "Type your second number:";
-    std::cin >> Num2;
-    std::cout << Add() << "\n";
-    Num1 = 
-    logged = true;
+    if (operation == add) {
+        std::cout << "Current Operation: " << operation << "\n";
+        std::cout << "Adding\n";
+        std::cout << "Type your first number:";
+        std::cin >> num1;
+        std::cout << "Type your second number:";
+        std::cin >> num2;
+        std::cout << Add() << "\n";
+    };
+
+    if (operation == subtract)
+    {
+        std::cout << "Current Operation: " << operation << "\n";
+        std::cout << "Type your first number:";
+        std::cin >> num1;
+        std::cout << "Type your second number:";
+        std::cin >> num2;
+        std::cout << Subtract() << "\n";
+    };
+
+    if (operation == multiply) {
+        std::cout << "Current Operation: " << operation << "\n";
+        std::cout << "multiplying\n";
+        std::cout << "Type your first number:";
+        std::cin >> num1;
+        std::cout << "Type your second number:";
+        std::cin >> num2;
+        std::cout << Multiply() << "\n";
+    };
+
+    if (operation == divide) {
+        std::cout << "Current Operation: " << operation << "\n";
+        std::cout << "Dividing\n";
+        std::cout << "Type your first number:";
+        std::cin >> num1;
+        std::cout << "Type your second number:";
+        std::cin >> num2;
+        std::cout << Divide() << "\n";
+    };
+
+    std::cin.get();
 };
 
 
-if (operation == "subtract" or "subtract")
+float Add()
 {
-    std::cout << "Current Operation: " << operation << "\n";
-    std::cout << "actually subtracting" << "\n";
-    std::cout << "Type your first number:";
-    std::cin >> Num1;
-    std::cout << "Type your second number:";
-    std::cin >> Num2;
-    std::cout << Subtract() << "\n";
+    return num1 + num2;
 }
 
-
-if (operation == "multiply" or "Multiply")
+float Subtract()
 {
-    std::cout << "Current Operation: " << operation << "\n";
-    std::cout << "actually multiplying" << std::endl;
-    std::cout << "Type your first number:";
-    std::cin >> Num1;
-    std::cout << "Type your second number:";
-    std::cin >> Num2;
-    std::cout << Multiply() << "\n";
-};
-
-
-if (operation == "divide" or "Divide")
-{
-    std::cout << "Current Operation: " << operation << "\n";
-    std::cout << "actually dividing" << std::endl;
-    std::cout << "Type your first number:";
-    std::cin >> Num1;
-    std::cout << "Type your second number:";
-    std::cin >> Num2;
-    std::cout << Divide() << "\n";
-};
-
-std::cin.get();
+    return num1 - num2;
 }
 
-
-int Add()
+float Multiply()
 {
-    return Num1 + Num2;
+    return num1 * num2;
 }
 
-int Subtract()
+float Divide()
 {
-    return Num1 - Num2;
-}
-
-int Multiply()
-{
-    return Num1 * Num2;
-}
-
-int Divide()
-{
-    return Num1/Num2;
+    return num1 / num2;
 }
